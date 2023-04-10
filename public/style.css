@@ -30,4 +30,5 @@ h1 {
 
 #photo-container img.active {
     transform: scale(2);
+    object-fit: contain;
 }

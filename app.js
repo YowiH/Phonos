@@ -1,12 +1,9 @@
 const express = require("express");
 const app = express();
-
 const fs = require("fs");
 const path = require("path");
 
-const viewsPath = path.join(__dirname, "views");
-app.set("views", viewsPath);
-app.set("view engine", "ejs");
+app.use(express.static("public"));
 
 app.get("/gallery", (req, res) => {
     const dirPath = path.join(__dirname, "public", "images");
@@ -16,7 +13,6 @@ app.get("/gallery", (req, res) => {
     });
 });
 
-app.use(express.static("public"));
 app.listen(3000, () => {
     console.log("Server listening on port 3000");
 });
