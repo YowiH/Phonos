@@ -27,3 +27,7 @@ h1 {
     transform: scale(1.1);
     cursor: pointer;
 }
+
+#photo-container img.active {
+    transform: scale(2);
+}
